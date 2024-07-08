@@ -1,0 +1,36 @@
+sessions:
+  - name: dev_project
+    windows:
+      - name: editor
+        panes:
+          - command: nvim
+          - command: htop
+      - name: server
+        panes:
+          - command: echo "pane 1"
+          - command: echo "pane 2
+          - command: echo "pane 3"
+      - name: git
+        panes:
+          - command: git status
+          - command: git log --oneline --graph --decorate
+          - command: git diff
+      - name: docker
+        panes:
+          - command: docker ps
+          - command: docker logs -f my_container
+          - command: docker exec -it my_container /bin/bash
+  - name: monitoring
+    windows:
+      - name: system
+        panes:
+          - command: htop
+      - name: network
+        panes:
+          - command: tcpdump -i any
+          - command: traceroute google.com
+      - name: logs
+        panes:
+          - command: tail -f /var/log/syslog
+          - command: tail -f /var/log/auth.log
+          - command: tail -f /var/log/kern.log
